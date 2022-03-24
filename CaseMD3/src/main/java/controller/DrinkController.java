@@ -154,10 +154,11 @@ public class DrinkController extends HttpServlet {
 
         String messErrorPrice = "";
         Integer price = null;
+        long x = 10000000L;
         try {
             price = Integer.parseInt(request.getParameter("priceD"));
-            if (price < 0) {
-                messErrorPrice = "Vui lòng nhập giá lớn hơn 0";
+            if (price < 0 || price >= x) {
+                messErrorPrice = "Vui lòng nhập giá lớn hơn 0 và bé hơn 10000000";
             }
         } catch (Exception e) {
             messErrorPrice = "Dữ liệu không hợp lệ, vui lòng nhập lại";
@@ -173,7 +174,7 @@ public class DrinkController extends HttpServlet {
             return;
         }
 
-        Drink newDrink = new Drink(type, drinkName, price);
+        Drink newDrink = new Drink(type, drinkName.trim(), price);
         drinkDAO.addDrink(newDrink);
         response.sendRedirect(request.getContextPath() + "/drinks");
     }

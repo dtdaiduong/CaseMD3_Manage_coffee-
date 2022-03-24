@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DrinkDAO implements IDrinkDAO {
-    DecimalFormat formatter = new DecimalFormat("###,###,###" + "đ");
     private Connection connection = null;
     private String SELECTALLDRINK = "select * from drink;";
     private String SELECTALLUSER = "select * from user";

@@ -15,7 +15,7 @@ public interface IDrinkDAO {
 
 //    List<Drink> selectDrinkByName(String check);
 
-    List<User> selectAllUser() throws SQLException;
+//    List<User> selectAllUser() throws SQLException;
 
     List<Drink> searchByName(String drinkNameSearch);
 
