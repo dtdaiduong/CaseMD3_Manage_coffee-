@@ -13,10 +13,6 @@ public interface IDrinkDAO {
 
     List<Drink> selectAllDrink();
 
-//    List<Drink> selectDrinkByName(String check);
-
-//    List<User> selectAllUser() throws SQLException;
-
     List<Drink> searchByName(String drinkNameSearch);
 
     List<Drink> selectDrinkInStock();

@@ -145,7 +145,7 @@ public class DrinkController extends HttpServlet {
         String drinkName = request.getParameter("drinkNameD");
         String messErrorName = "";
         if (drinkName == null || drinkName.equals("")) {
-            messErrorName = "Không được để trống trường này";
+            messErrorName = "Vui lòng nhập dữ liệu";
         } else {
             if (drinkDAO.checkDuplicateDrinkName(drinkName)) {
                 messErrorName = "Tên này đã tồn tại";
@@ -158,7 +158,7 @@ public class DrinkController extends HttpServlet {
         try {
             price = Integer.parseInt(request.getParameter("priceD"));
             if (price < 0 || price >= x) {
-                messErrorPrice = "Vui lòng nhập giá lớn hơn 0 và bé hơn 10000000";
+                messErrorPrice = "Vui lòng không nhập giá âm";
             }
         } catch (Exception e) {
             messErrorPrice = "Dữ liệu không hợp lệ, vui lòng nhập lại";
@@ -185,7 +185,7 @@ public class DrinkController extends HttpServlet {
         String drinkName = request.getParameter("drinkNameD");
         String messErrorName = "";
         if (drinkName == null || drinkName.equals("")) {
-            messErrorName = "Không được để trống trường này";
+            messErrorName = "Vui lòng nhập dữ liệu";
         } else {
             if (drinkDAO.checkDuplicateDrinkName(drinkName)) {
                 messErrorName = "Tên này đã tồn tại";
@@ -196,7 +196,7 @@ public class DrinkController extends HttpServlet {
         try {
             price = Integer.parseInt(request.getParameter("priceD"));
             if (price < 0) {
-                messErrorPrice = "Vui lòng nhập giá lớn hơn 0";
+                messErrorPrice = "Vui lòng không nhập số âm";
             }
         } catch (Exception e) {
             messErrorPrice = "Dữ liệu không hợp lệ, vui lòng nhập lại";

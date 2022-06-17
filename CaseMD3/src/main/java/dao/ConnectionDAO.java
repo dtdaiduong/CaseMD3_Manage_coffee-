@@ -21,15 +21,4 @@ public class ConnectionDAO {
         return connection;
     }
 
-//    public static Connection getSqlConnection(String hostName, String dbName, String userName, String password) {
-//        try {
-//            Class.forName("com.mysql.cj.jdbc.Driver");
-//            String connectionURL = "jdbc:mysql://" + hostName + ":3306/" + dbName;
-//            return DriverManager.getConnection(connectionURL, userName, password);
-//        } catch (SQLException | ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return null;
-//    }
 }
